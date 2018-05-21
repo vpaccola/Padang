@@ -1,3 +1,19 @@
-p{
-color : red;
+/*  Utilizamos o Google FOnts para carregar algumas fontes direto para a Página .https://fonts.google.com/   */
+/*Atraves do GOOGLE FONTS colocamos o link la no Index e utilizaremos essas Familias
+font-family: 'Pacifico', cursive;  ( Pro titulo )
+font-family: 'Kavivanar', cursive;  (  paragrafos ...)
+font-family: 'Fjalla One', sans-serif; ( Subtitulos)
+
+*/
+/*GERAL ..... 
+vai ter os estilos ... body */
+body{
+	font-family: "Kavivanar", Kavivanar ,  Arial, sans-serif; /* se nao carregar a open sans, vai a outra e por ultima um generica*/
+	color: #4d4d4d;
+}
+
+h1,h2,h3{
+	margin: 0;
+	font-family: 'Fjalla One',Kavivanar, Arial, sans-serif;
+	font-weight: 700px;
 }

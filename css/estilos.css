@@ -26,3 +26,45 @@ h1,h2,h3{
 	border-radius: 3px;
 
 }
+/***** Navegação******/
+
+nav{
+	/*barra de navegação mobile, usamos flex  para propr dos navegadores...*/
+	display:flex;
+	flex-direction: collum;
+	align-items: center;
+	background-color: #4d4d4d;
+}
+nav > a {
+ /*Selecionando todos os A que esta dentro da NAVEGAÇACAO = Nav*/
+	text-decoration: none;
+	color: #f1f1f1;
+	font-weight: 700;
+	font-size: 28px;
+	font-family: Kavivanar , sans-serif;
+}
+/* remover as bolinhas da lista... e remov espacamento */
+nav ul{
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+
+}
+
+nav ul li{ /*  ajustando os elementos da lista de navegação*/
+	text-align: center;
+	width: 100%;
+
+}
+ /*os link dentro das sub/listas da barra de navegacao*/
+nav ul li a {
+	display: inline-block; /*block pq posso alterar o espaço interno ... */
+	padding: 10px 0;
+	width: 100%;
+	text-decoration: none;
+	color: #f1f1f1;
+
+}

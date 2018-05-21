@@ -17,3 +17,12 @@ h1,h2,h3{
 	font-family: 'Fjalla One',Kavivanar, Arial, sans-serif;
 	font-weight: 700px;
 }
+.botao{
+	color: #4d4d4d;
+	text-decoration: none;
+	padding: 10px 30px;
+	background-color: #f1f1f1;
+	font-size: .em;
+	border-radius: 3px;
+
+}

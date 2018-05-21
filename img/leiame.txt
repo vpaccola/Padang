@@ -1,1 +1,1 @@
-
+DIretório para o armazenamento de Icones e imagens referente a Pagina Inicial do Site. 

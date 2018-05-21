@@ -1,0 +1,296 @@
+/*  Utilizamos o Google FOnts para carregar algumas fontes direto para a Página .https://fonts.google.com/   */
+/*Atraves do GOOGLE FONTS colocamos o link la no Index e utilizaremos essas Familias
+font-family: 'Pacifico', cursive;  ( Pro titulo )
+font-family: 'Kavivanar', cursive;  (  paragrafos ...)
+font-family: 'Fjalla One', sans-serif; ( Subtitulos)
+
+*/
+/*GERAL ..... 
+vai ter os estilos ... body */
+body{
+	font-family: "Kavivanar", Kavivanar ,  Arial, sans-serif; /* se nao carregar a open sans, vai a outra e por ultima um generica*/
+	color: #4d4d4d;
+}
+
+h1,h2,h3{
+	margin: 0;
+	font-family: 'Fjalla One',Kavivanar, Arial, sans-serif;
+	font-weight: 700px;
+}
+.botao{
+		color: #98FB98;
+	text-decoration: none;
+	padding: 10px 30px;
+	background-color: green;
+	font-size: .em;
+	border-radius: 3px;
+
+}
+
+/*============================================
+Navegação
+============================================*/
+
+nav{
+	/*barra de navegação mobile, usamos flex propriedades dos navegadores...*/
+	display:flex;
+	flex-direction: collum;
+	align-items: center;
+	background-color: #4d4d4d;
+}
+ /*Selecionando todos os A que esta dentro da NAVEGAÇACAO = Nav*/
+nav > a {
+	text-decoration: none;
+	color: #f1f1f1;
+	font-weight: 700;
+	font-size: 28px;
+	font-family: Kavivanar , sans-serif;
+}
+/* remover as bolinhas da lista... padding=0 remov espacamento */
+nav ul{
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+
+}
+
+nav ul li{ /* os elementos da lista de navegação*/
+	text-align: center;
+	width: 100%;
+
+}
+ /*os link dentro das sub/listas da barra de navegacao*/
+nav ul li a {
+	display: inline-block; /*block pq posso alterar o espaço interno ... */
+	padding: 10px 0;
+	width: 100%;
+	text-decoration: none;
+	color: #f1f1f1;
+
+}
+
+/*============================================
+Estilos do Cabeçalho ==== Padang Surf =====
+============================================*/
+header{
+	background-image: url('../img/fundo-cabecalho.jpg');
+	background-size: cover; /*cobrir */
+	background-position: center;
+	background-repeat: no-repeat; /*que sentido quer que o fundo seja repetido*/
+	color: green;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 20px;
+	padding-bottom: 20px;
+	padding: 20px 20px 20px 20px;
+
+}
+
+header p{
+	margin-bottom: 2em;/*uma medida relativa do tamanho da fonde do header...*/
+	color: black;
+
+}
+
+/*============================================
+SOBRE
+============================================*/
+
+#sobre{
+	/*background-image: url('../img/fundo-sobre.jpg');
+	background-size: cover; /*cobrir */
+	background-position: center;
+	background-repeat: no-repeat; /*que sentido quer que o fundo seja repetido*/
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 0 20px 20px 20px;
+/*background-color: grey;       escolherrrrrrr um melhorrr*/
+	color: #4d4d4d;
+}
+/*Unico paragrado que ta dentro do Sobre*/
+#sobre p{
+	margin-bottom: 2.5em;
+	max-width: 1000px; /*define uma largura maxima .... muito legal*/
+
+
+}
+/* Não sei se diferencio o botado do Padang (inicio e do sobre) 
+
+
+#sobre .botao {
+	background-color: #f1f1f1;
+	color: #4d4d4d;
+}*/
+
+
+/*============================================
+Servicos
+============================================*/
+
+#servicos{
+
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*como os Serviços estao separados por div....*/
+
+#servicos div {
+ 	display: flex;
+ 	flex-direction: column;
+ 	align-items: center;
+ 	text-align: center;
+ 	margin-top: 30px;
+}
+/*============================================
+Portfolio
+============================================*/
+
+#portfolio{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 20px;
+}
+
+#portfloio h2{
+	margin-bottom: 20px;
+}
+
+#portfolio img{
+	width: 100%
+}
+
+
+/*============================================
+Contato
+==========================================*/
+#contato{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 20px;
+
+}
+
+
+/*============================================
+Rodapé
+============================================*/
+
+footer{
+	text-align: center;
+	padding: 10px;
+	background-color: black;
+	color: #f1f1f1;
+}
+
+
+/*MEDIA QUERIES ( estudarrrr isso ))*/
+
+@media  screen and (min-width: 768px) {
+	/*Navegacao*/
+	nav {
+		flex-direction: row ; /*RODAPE*/
+		justify-content: space-around; /*nao tem espaço ao redor*/
+		}
+	nav ul {
+				flex-direction: row ; /*RODAPE*/
+				width: 70%;
+				
+	}
+
+	
+}
+
+/*============================================
+Cabeçalho .....
+============================================*/
+/*CABEÇALHOOO Padang Surf .... plataforma padang ... ver mais */
+
+header{
+	/*height: 60vh;/*altura desse elemento é de 60% a autura do nav.*/ 
+	height: 600px;
+	height: 60vh;
+	justify-content:  center;
+}
+
+
+/*============================================
+SOBRE
+============================================*/
+#sobre{
+	height: 250px;
+	height: 30vh;
+	justify-content: center;
+	min-height: 250px;
+}
+
+
+/*============================================
+Servicos
+============================================*/
+
+#servicos{
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	max-width: 1000px;
+	margin: 0 auto;
+
+}
+
+#servicos h2{
+	text-align: center;
+	width: 100%;
+}
+
+#servicos div{
+	flex-grow: 1;
+	flex-basis: 150px;
+	padding: 0 0px;
+}
+
+#servicos img{
+	width: 20%
+}
+/*============================================
+Porfolio
+============================================*/
+#portfolio{
+flex-direction: row;
+flex-wrap: wrap;
+}
+#portfolio h2{
+	width: 100%;
+	text-align: center;
+}
+#portfolio img{
+	width: 33.33333333%;
+}
+/*============================================
+Contato
+============================================*/
+#contato{
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+#contato h2,
+#contato p {
+	width: 100%;
+}

@@ -1,0 +1,1 @@
+Utilizaremos o Recurso do Normalize.css para que as diferenças entre os navegadores não altere o layout ..... encontrei através de uma pesquisa no google que me chegou ao site https://necolas.github.io/normalize.css/

@@ -39,6 +39,8 @@ nav{
 	flex-direction: collum;
 	align-items: center;
 	background-color: #076A2B;
+	
+
 }
  /*Selecionando todos os A que esta dentro da NAVEGAÇACAO = Nav*/
 nav > a {
@@ -55,7 +57,6 @@ nav ul{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 100%;
 
 }
 
@@ -82,7 +83,7 @@ header{
 	background-size: cover; /*cobrir */
 	background-position: center;
 	background-repeat: no-repeat; /*que sentido quer que o fundo seja repetido*/
-	color: green;
+	
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -91,6 +92,9 @@ header{
 	padding-bottom: 20px;
 	padding: 20px 20px 20px 20px;
 
+}
+header h1{
+	font-size: 50px;
 }
 
 header p{
@@ -103,22 +107,21 @@ header p{
 SOBRE
 ============================================*/
 
-#sobre{
+#galeria{
 	/*background-image: url('../img/fundo-sobre.jpg');
 	background-size: cover; /*cobrir */
 	background-position: center;
 	background-repeat: no-repeat; /*que sentido quer que o fundo seja repetido*/
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	padding: 0 20px 20px 20px;
+	padding:20px;
 /*background-color: grey;       escolherrrrrrr um melhorrr*/
 	color: #4d4d4d;
 }
 /*Unico paragrado que ta dentro do Sobre*/
-#sobre p{
+#galeria p{
 	margin-bottom: 2.5em;
 	max-width: 1000px; /*define uma largura maxima .... muito legal*/
 
@@ -127,7 +130,7 @@ SOBRE
 /* Não sei se diferencio o botado do Padang (inicio e do sobre) 
 
 
-#sobre .botao {
+#galeria .botao {
 	background-color: #f1f1f1;
 	color: #4d4d4d;
 }*/
@@ -193,7 +196,7 @@ Rodapé
 
 footer{
 	text-align: center;
-	padding: 10px;
+	padding: 1px;
 	background-color: black;
 	color: #f1f1f1;
 }
@@ -300,6 +303,9 @@ Contato
 	width: 50%
 }
 
+
+
+/*LInks das REdes Sociaissss.....*/
 .facebook {
     background-image: url('../img/facebook.jpg');
 }
@@ -315,3 +321,6 @@ Contato
 .instagram {
       background-image: url('../img/instagram.jpg');
 }
+
+
+

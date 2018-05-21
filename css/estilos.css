@@ -68,3 +68,25 @@ nav ul li a {
 	color: #f1f1f1;
 
 }
+
+
+/*===Estilos do Cabeçalho ==== Padang Surf */
+header{
+	background-image: url('../img/fundo-cabecalho.jpg');
+	background-size: cover; /*cobrir */
+	background-position: center;
+	background-repeat: no-repeat; /*que sentido quer que o fundo seja repetido*/
+	color: green;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 20px;
+	padding-bottom: 20px;
+	padding: 20px 20px 20px 20px;
+
+}
+header p{
+	margin-bottom: 2em;/*uma medida relativa do tamanho da fonde do header...*/
+	color: black; /*ver outra cor legal */ 
+}

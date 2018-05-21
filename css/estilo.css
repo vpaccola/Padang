@@ -21,11 +21,13 @@ h1,h2,h3{
 		color: #98FB98;
 	text-decoration: none;
 	padding: 10px 30px;
-	background-color: green;
+	background-color: #076A2B;
 	font-size: .em;
 	border-radius: 3px;
 
 }
+
+
 
 /*============================================
 Navegação
@@ -36,7 +38,7 @@ nav{
 	display:flex;
 	flex-direction: collum;
 	align-items: center;
-	background-color: #4d4d4d;
+	background-color: #076A2B;
 }
  /*Selecionando todos os A que esta dentro da NAVEGAÇACAO = Nav*/
 nav > a {
@@ -168,7 +170,7 @@ Portfolio
 }
 
 #portfolio img{
-	width: 100%
+	width: 30%
 }
 
 
@@ -180,7 +182,7 @@ Contato
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	padding: 20px;
+	padding: 100px;
 
 }
 
@@ -202,12 +204,12 @@ footer{
 @media  screen and (min-width: 768px) {
 	/*Navegacao*/
 	nav {
-		flex-direction: row ; /*RODAPE*/
+		flex-direction: row; ; /*RODAPE*/
 		justify-content: space-around; /*nao tem espaço ao redor*/
 		}
 	nav ul {
 				flex-direction: row ; /*RODAPE*/
-				width: 70%;
+				width: 50%;
 				
 	}
 
@@ -293,4 +295,23 @@ Contato
 #contato h2,
 #contato p {
 	width: 100%;
+}
+#contato img{
+	width: 50%
+}
+
+.facebook {
+    background-image: url('../img/facebook.jpg');
+}
+ 
+.youtube {    
+	background-image: url('../img/youtube.jpg');
+}
+ 
+.gmail {
+       background-image: url('../img/google.jpg');
+}
+ 
+.instagram {
+      background-image: url('../img/instagram.jpg');
 }

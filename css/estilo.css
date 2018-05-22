@@ -83,9 +83,9 @@ header{
 	background-size: cover; /*cobrir */
 	background-position: center;
 	background-repeat: no-repeat; /*que sentido quer que o fundo seja repetido*/
-	
+		flex-direction: column;
+
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	text-align: center;
 	padding: 20px;
@@ -148,7 +148,7 @@ Servicos
 	align-items: center;
 }
 
-/*como os Serviços estao separados por div....*/
+
 
 #servicos div {
  	display: flex;
@@ -156,6 +156,30 @@ Servicos
  	align-items: center;
  	text-align: center;
  	margin-top: 30px;
+}
+
+#servicos{
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	max-width: 1000px;
+	margin: 0 auto;
+
+}
+
+#servicos h2{
+	text-align: center;
+	width: 100%;
+}
+
+#servicos div{
+	flex-grow: 1;
+	flex-basis: 150px;
+	padding: 0 0px;
+}
+
+#servicos img{
+	width: 20%
 }
 /*============================================
 Portfolio
@@ -243,33 +267,7 @@ SOBRE
 }
 
 
-/*============================================
-Servicos
-============================================*/
 
-#servicos{
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-items: flex-start;
-	max-width: 1000px;
-	margin: 0 auto;
-
-}
-
-#servicos h2{
-	text-align: center;
-	width: 100%;
-}
-
-#servicos div{
-	flex-grow: 1;
-	flex-basis: 150px;
-	padding: 0 0px;
-}
-
-#servicos img{
-	width: 20%
-}
 /*============================================
 Porfolio
 ============================================*/
@@ -324,3 +322,38 @@ Contato
 
 
 
+/*Bibiografia.html*/
+#bibiografia{
+	background-position: center;
+	background-repeat: no-repeat; /*que sentido quer que o fundo seja repetido*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding:20px;
+	color: #4d4d4d;
+}
+/*Unico paragrado que ta dentro do Sobre*/
+#bibiografia p{
+	margin-bottom: 2.5em;
+	max-width: 1000px; /*define uma largura maxima .... muito legal*/
+
+
+}
+#areaAtuacao{
+
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*como os Serviços estao separados por div....*/
+
+#areaAtuacao div {
+ 	display: flex;
+ 	flex-direction: column;
+ 	align-items: center;
+ 	text-align: center;
+ 	margin-top: 30px;
+}

@@ -105,7 +105,7 @@ Estilos do Cabeçalho ==== Padang Surf =====
 ============================================*/
 header {
 	background-image: url('../img/fundo-cabecalho.jpg');
-	background-attachment: scroll; /* Teste para ver se a imagem fica fixa, no meu Bakcground */
+	background-attachment: fixed; /* Teste para ver se a imagem fica fixa, no meu Bakcground */
 	background-size: cover; /*cobrir */
 	background-position: center;
 	background-repeat: no-repeat; /*que sentido quer que o fundo seja repetido*/

@@ -1,0 +1,95 @@
+/* Projeto FPIN - Padang
+	Alunos: Everton Tenorio
+			Victor Paccola
+			Leonardo 
+*/
+
+@font-face {
+  font-family: "zerohour";
+  src: url("zerohour.ttf") format("truetype");
+}
+
+.nova-font {
+  font-family: "zerohour";  
+} 
+
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background: url('../img/login.jpg')no-repeat;
+	webkit-backgroun-size: cover;
+	background-size: cover;
+	font-family: tahoma,sans-serif;
+	font-size: 15px;
+}
+
+.form-area {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	height: 500px;
+	box-sizing: border-box;
+	background: rgba(0,0,0,0.8);
+	padding: 80px;
+
+}
+
+body #logo {
+	text-align: center;
+	color: #1abc9c;
+	font-size: 20px;	
+	
+}
+
+h2 {
+	margin: 0px;
+	padding: 0 0 10px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.form-area p {
+	margin: 0px;
+	padding: 0px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.form-area input,select {
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.form-area input[type=text],
+.form-area input[tpe=email]{
+	border: none;
+	border-bottom: 1px solod #ffffff;
+	background-color: transparent;
+	outline: none;
+	height: 40px;
+	color: #ffffff
+	display: 16px;
+}
+
+::placeholder {
+	color: #ffffff;
+}
+
+.form-area select {
+	margin-top: 20px;
+	padding: 10px 0;
+}
+
+.form-area input[type=submit] {
+	border: none;
+	height: 40px;
+	outline: none;
+	color: #ffffff;
+	font-size: 15px;
+	background-color: #1abc9c;
+	cursor: pointer;
+	border-radius: 10px;
+}

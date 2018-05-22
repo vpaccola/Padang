@@ -1,30 +1,53 @@
-/*  Utilizamos o Google FOnts para carregar algumas fontes direto para a Página .https://fonts.google.com/   */
-/*Atraves do GOOGLE FONTS colocamos o link la no Index e utilizaremos essas Familias
-font-family: 'Pacifico', cursive;  ( Pro titulo )
-font-family: 'Kavivanar', cursive;  (  paragrafos ...)
-font-family: 'Fjalla One', sans-serif; ( Subtitulos)
-
+/* Projeto FPIN - Padang
+	Alunos: Everton Tenorio
+			Victor Paccola
+			Leonardo 
 */
-/*GERAL ..... 
-vai ter os estilos ... body */
-body{
-	font-family: "Kavivanar", Kavivanar ,  Arial, sans-serif; /* se nao carregar a open sans, vai a outra e por ultima um generica*/
-	color: #4d4d4d;
+
+
+@font-face {
+  font-family: "zerohour";
+  src: url("zerohour.ttf") format("truetype");
 }
 
-h1,h2,h3{
+.nova-font {
+  font-family: "zerohour";  
+} 
+
+body {
+	/*font-family: "Inconsolata",  monospace;*/
+	font-family: "Josefin Sans", sans-serif;
+	color: #4d4d4d;*/
+	color: black;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	color: #37302a;
+	text-align: center;
+	
+}
+
+
+h1,h2,h3 {
 	margin: 0;
-	font-family: 'Fjalla One',Kavivanar, Arial, sans-serif;
+	font-family: "Montserrat", arial, sans-serif;
+	/*font-family: 'Fjalla One',Kavivanar, Arial, sans-serif;*/
 	font-weight: 700px;
 }
-.botao{
-		color: #98FB98;
+
+h2 {
+	color: #c3c0c0;
+	font-family: "zerohour";  
+}
+
+.botao {
+	font-family: "Kavivanar", Kavivanar ,  Arial, sans-serif;
+	color: white;
 	text-decoration: none;
 	padding: 10px 30px;
-	background-color: #076A2B;
+	background-color: #1abc9c;
 	font-size: .em;
 	border-radius: 3px;
-
 }
 
 
@@ -33,23 +56,25 @@ h1,h2,h3{
 Navegação
 ============================================*/
 
-nav{
+nav {
 	/*barra de navegação mobile, usamos flex propriedades dos navegadores...*/
 	display:flex;
-	flex-direction: collum;
+	flex-direction: column;
 	align-items: center;
-	background-color: #076A2B;
-	
-
+    color: #16a085;
+	background-color: white;	
 }
+
  /*Selecionando todos os A que esta dentro da NAVEGAÇACAO = Nav*/
 nav > a {
 	text-decoration: none;
-	color: #f1f1f1;
+	color: #16a085;
 	font-weight: 700;
-	font-size: 28px;
-	font-family: Kavivanar , sans-serif;
+	font-size: 25px;
+	font-family: Kavemivanar , sans-serif;
+	padding: 20px;
 }
+
 /* remover as bolinhas da lista... padding=0 remov espacamento */
 nav ul{
 	list-style: none;
@@ -57,35 +82,35 @@ nav ul{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
 }
 
-nav ul li{ /* os elementos da lista de navegação*/
+nav ul li { /* os elementos da lista de navegação*/
 	text-align: center;
 	width: 100%;
 
 }
- /*os link dentro das sub/listas da barra de navegacao*/
+
+/*os link dentro das sub/listas da barra de navegacao*/
 nav ul li a {
 	display: inline-block; /*block pq posso alterar o espaço interno ... */
 	padding: 10px 0;
 	width: 100%;
 	text-decoration: none;
-	color: #f1f1f1;
+	color: #16a085;
 
 }
 
 /*============================================
 Estilos do Cabeçalho ==== Padang Surf =====
 ============================================*/
-header{
+header {
 	background-image: url('../img/fundo-cabecalho.jpg');
 	background-size: cover; /*cobrir */
 	background-position: center;
 	background-repeat: no-repeat; /*que sentido quer que o fundo seja repetido*/
-		flex-direction: column;
-
+	
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	text-align: center;
 	padding: 20px;
@@ -93,11 +118,12 @@ header{
 	padding: 20px 20px 20px 20px;
 
 }
-header h1{
+
+header h1 {
 	font-size: 50px;
 }
 
-header p{
+header p {
 	margin-bottom: 2em;/*uma medida relativa do tamanho da fonde do header...*/
 	color: black;
 
@@ -107,7 +133,7 @@ header p{
 SOBRE
 ============================================*/
 
-#galeria{
+#galeria {
 	/*background-image: url('../img/fundo-sobre.jpg');
 	background-size: cover; /*cobrir */
 	background-position: center;
@@ -116,17 +142,19 @@ SOBRE
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	padding:20px;
+	padding: 80px;
 /*background-color: grey;       escolherrrrrrr um melhorrr*/
 	color: #4d4d4d;
 }
+
 /*Unico paragrado que ta dentro do Sobre*/
-#galeria p{
+#galeria p {
 	margin-bottom: 2.5em;
 	max-width: 1000px; /*define uma largura maxima .... muito legal*/
 
 
 }
+
 /* Não sei se diferencio o botado do Padang (inicio e do sobre) 
 
 
@@ -140,15 +168,15 @@ SOBRE
 Servicos
 ============================================*/
 
-#servicos{
+#servicos {
 
-	padding: 20px;
+	padding: 80px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-
+/*como os Serviços estao separados por div....*/
 
 #servicos div {
  	display: flex;
@@ -158,60 +186,195 @@ Servicos
  	margin-top: 30px;
 }
 
-#servicos{
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-items: flex-start;
-	max-width: 1000px;
-	margin: 0 auto;
 
-}
-
-#servicos h2{
-	text-align: center;
-	width: 100%;
-}
-
-#servicos div{
-	flex-grow: 1;
-	flex-basis: 150px;
-	padding: 0 0px;
-}
-
-#servicos img{
-	width: 20%
-}
 /*============================================
 Portfolio
 ============================================*/
 
-#portfolio{
+#portfolio {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 20px;
+	padding-top: 10px;
 }
 
-#portfloio h2{
+#portfolio h2 {
 	margin-bottom: 20px;
 }
 
-#portfolio img{
+#portfolio img {
 	width: 30%
+}
+
+
+/*
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}*/
+
+form {
+    font-family: "Montserrat", arial, sans-serif;
+    margin-top: 0em;
+    color: #ccc;
+    font-size: 12px;
+    padding: 5em;
+    text-align: center;
+    line-height: 26px;
+    font-weight: 400;
+    box-sizing: border-box;    
+
+}
+
+form h2 {
+    padding: 1em;
+}
+
+.form-horizontal .form-grupo {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.btn:hover, .btn:focus, .btn:active {
+    outline: none !important;
+    background: #00a2e8 !important;
+    border-color: transparent !important;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #00a2e8;
+    border-color: #29a192;
+}
+.form-horizontal .form-grupo {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.form-group {
+    margin-bottom: 30px;
+}
+
+.col-md-4 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.form-horizontal .form-grupo {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.form-control:hover, .form-control:focus, .form-control:active {
+    outline: none;
+    box-shadow: none !important;
+    border: 2px solid #00a2e8;
+}
+textarea.form-control {
+    height: auto;
+}
+.form-control {
+    box-shadow: none !important;
+    border: 2px solid #444;
+    background: transparent;
+    font-family: "Montserrat", arial, sans-serif;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 14px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+textarea {
+    overflow: auto;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+textarea {
+    font-family: monospace;
+    border-color: rgb(169, 169, 169);
+}
+user agent stylesheet
+textarea {
+    -webkit-appearance: textarea;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    resize: auto;
+    cursor: text;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    padding: 2px;
+}
+user agent stylesheet
+input, textarea, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+user agent stylesheet
+input, textarea, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb !important;
 }
 
 
 /*============================================
 Contato
 ==========================================*/
-#contato{
+/*#contato{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
 	padding: 100px;
 
-}
+}*/
 
 
 /*============================================
@@ -220,7 +383,7 @@ Rodapé
 
 footer{
 	text-align: center;
-	padding: 1px;
+	padding: 5px;
 	background-color: black;
 	color: #f1f1f1;
 }
@@ -267,25 +430,100 @@ SOBRE
 }
 
 
+/*============================================
+Servicos
+============================================*/
+
+#servicos{
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	max-width: 1000px;
+	margin: 0 auto;
+
+}
+
+#servicos h2{
+	text-align: center;
+	width: 100%;
+}
+
+#servicos div{
+	flex-grow: 1;
+	flex-basis: 150px;
+	padding: 0 0px;
+}
+
+#servicos img{
+	width: 20%
+}
 
 /*============================================
 Porfolio
-============================================*/
-#portfolio{
-flex-direction: row;
-flex-wrap: wrap;
+========== ==================================*/
+#portfolio {
+	flex-direction: row;
+	flex-wrap: wrap;
 }
-#portfolio h2{
+#portfolio h2 {
 	width: 100%;
 	text-align: center;
 }
-#portfolio img{
+
+#portfolio img {
 	width: 33.33333333%;
 }
+
+/**************************Galeria do Portfolio****************************/
+/* criando as colunas iguais que flutua uma do lado da outra  */
+* {
+    box-sizing: border-box;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* limpar os float dps das linha */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* Criando um Layout Responsivo que que fica 2 colunas ....*/
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Criando um Layout Responsivo que fica colunas */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+
+
+
 /*============================================
 Contato
 ============================================*/
-#contato{
+#contato {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -303,7 +541,7 @@ Contato
 
 
 
-/*LInks das REdes Sociaissss.....*/
+/* Redes Sociais.....*/
 .facebook {
     background-image: url('../img/facebook.jpg');
 }
@@ -322,38 +560,33 @@ Contato
 
 
 
-/*Bibiografia.html*/
-#bibiografia{
+#bibiografia {
+	/*background-image: url('../img/fundo-sobre.jpg');
+	background-size: cover; /*cobrir */
 	background-position: center;
 	background-repeat: no-repeat; /*que sentido quer que o fundo seja repetido*/
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	padding:20px;
+	padding: 80px;
+/*background-color: grey;       escolherrrrrrr um melhorrr*/
 	color: #4d4d4d;
 }
+
 /*Unico paragrado que ta dentro do Sobre*/
-#bibiografia p{
+#bibiografia p {
 	margin-bottom: 2.5em;
 	max-width: 1000px; /*define uma largura maxima .... muito legal*/
 
 
 }
-#areaAtuacao{
 
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
 
-/*como os Serviços estao separados por div....*/
-
-#areaAtuacao div {
- 	display: flex;
- 	flex-direction: column;
- 	align-items: center;
- 	text-align: center;
- 	margin-top: 30px;
-}
+/*  Utilizamos o Google FOnts para carregar algumas fontes 
+direto para a Página .https://fonts.google.com/ 
+Atraves do GOOGLE FONTS colocamos o link la no Index e utilizaremos essas Familias
+font-family: 'Pacifico', cursive;  ( Pro titulo )
+font-family: 'Kavivanar', cursive;  (  paragrafos ...)
+font-family: 'Fjalla One', sans-serif; ( Subtitulos)
+ */

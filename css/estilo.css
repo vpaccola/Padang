@@ -3,8 +3,6 @@
 			Victor Paccola
 			Leonardo 
 */
-
-
 @font-face {
   font-family: "zerohour";
   src: url("zerohour.ttf") format("truetype");
@@ -23,10 +21,8 @@ body {
 	-ms-text-size-adjust: 100%;
 	text-size-adjust: 100%;
 	color: #37302a;
-	text-align: center;
-	
+	text-align: center;	
 }
-
 
 h1,h2,h3 {
 	margin: 0;
@@ -50,11 +46,17 @@ h2 {
 	border-radius: 3px;
 }
 
+/*===Cabeçalho==*/
+/*CABEÇALHOOO Padang Surf .... plataforma padang ... ver mais */
 
+header{
+	/*height: 60vh;/*altura desse elemento é de 60% a autura do nav.*/ 
+	height: 600px;
+	height: 60vh;
+	justify-content:  center;
+}
 
-/*============================================
-Navegação
-============================================*/
+/*=========Navegação==============*/
 
 nav {
 	/*barra de navegação mobile, usamos flex propriedades dos navegadores...*/
@@ -120,9 +122,7 @@ header {
 
 }
 
-header h1 {
-	font-size: 50px;
-}
+header h1 {	font-size: 50px; }
 
 header p {
 	margin-bottom: 2em;/*uma medida relativa do tamanho da fonde do header...*/
@@ -130,13 +130,14 @@ header p {
 
 }
 
-/*============================================
-SOBRE
-============================================*/
+/*=====SOBRE=======*/
 
 #galeria {
 	/*background-image: url('../img/fundo-sobre.jpg');
 	background-size: cover; /*cobrir */
+	background-color: #F0FFFF;
+	background-position: center;
+	background-repeat: no-repeat;;
 	background-position: center;
 	background-repeat: no-repeat; /*que sentido quer que o fundo seja repetido*/
 	display: flex;
@@ -144,37 +145,32 @@ SOBRE
 	align-items: center;
 	text-align: center;
 	padding: 80px;
-/*background-color: grey;       escolherrrrrrr um melhorrr*/
-	color: #4d4d4d;
+	color: #4d4d4d;/* escolherrrrrrr um melhorrr*/
 }
-
 /*Unico paragrado que ta dentro do Sobre*/
 #galeria p {
 	margin-bottom: 2.5em;
 	max-width: 1000px; /*define uma largura maxima .... muito legal*/
-
-
 }
 
 /* Não sei se diferencio o botado do Padang (inicio e do sobre) 
-
-
 #galeria .botao {
 	background-color: #f1f1f1;
 	color: #4d4d4d;
 }*/
 
-
-/*============================================
-Servicos
-============================================*/
+/*=======Servicos==========*/
 
 #servicos {
-
+    	
 	padding: 80px;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	max-width: 1000px;
+	margin: 0 auto;
 }
 
 /*como os Serviços estao separados por div....*/
@@ -185,42 +181,33 @@ Servicos
  	align-items: center;
  	text-align: center;
  	margin-top: 30px;
+ 	flex-grow: 1;
+	flex-basis: 150px;
+	padding-top:  10px;
+
+}
+#servicos h2{
+	text-align: center;
+	width: 100%;
+}
+#servicos img{
+	width: 20%
 }
 
 
-/*============================================
-Portfolio
-============================================*/
+/*=====Portfolio=====*/
 
 #portfolio {
+	
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding-top: 10px;
+
 }
 
-#portfolio h2 {
-	margin-bottom: 20px;
-}
-
-#portfolio img {
-	width: 30%
-}
-
-
-/*
-label {
-    display: inline-block;
-    max-width: 100%;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}*/
+#portfolio h2 {	margin-bottom: 20px;}
+#portfolio img {width: 30%}
 
 form {
     font-family: "Montserrat", arial, sans-serif;
@@ -250,7 +237,7 @@ form h2 {
     border-color: transparent !important;
 }
 .btn-primary:hover {
-    color: #fff;
+    color: # fff;
     background-color: #00a2e8;
     border-color: #29a192;
 }
@@ -267,6 +254,7 @@ form h2 {
     min-height: 1px;
     padding-left: 20px;
     padding-right: 20px;
+
 }
 
 .form-horizontal .form-grupo {
@@ -364,10 +352,7 @@ input, textarea, select, button, meter, progress {
     -webkit-writing-mode: horizontal-tb !important;
 }
 
-
-/*============================================
-Contato
-==========================================*/
+/*=======Contato===========*/
 /*#contato{
 	display: flex;
 	flex-direction: column;
@@ -377,10 +362,7 @@ Contato
 
 }*/
 
-
-/*============================================
-Rodapé
-============================================*/
+/*======Rodapé==========*/
 
 footer{
 	text-align: center;
@@ -389,8 +371,7 @@ footer{
 	color: #f1f1f1;
 }
 
-
-/*MEDIA QUERIES ( estudarrrr isso ))*/
+/*MEDIA QUERIES ( Estudar mais sobre .... ))*/
 
 @media  screen and (min-width: 768px) {
 	/*Navegacao*/
@@ -407,17 +388,7 @@ footer{
 	
 }
 
-/*============================================
-Cabeçalho .....
-============================================*/
-/*CABEÇALHOOO Padang Surf .... plataforma padang ... ver mais */
 
-header{
-	/*height: 60vh;/*altura desse elemento é de 60% a autura do nav.*/ 
-	height: 600px;
-	height: 60vh;
-	justify-content:  center;
-}
 
 
 /*============================================
@@ -429,36 +400,6 @@ SOBRE
 	justify-content: center;
 	min-height: 250px;
 }
-
-
-/*============================================
-Servicos
-============================================*/
-
-#servicos{
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-items: flex-start;
-	max-width: 1000px;
-	margin: 0 auto;
-
-}
-
-#servicos h2{
-	text-align: center;
-	width: 100%;
-}
-
-#servicos div{
-	flex-grow: 1;
-	flex-basis: 150px;
-	padding: 0 0px;
-}
-
-#servicos img{
-	width: 20%
-}
-
 /*============================================
 Porfolio
 ========== ==================================*/
@@ -474,7 +415,6 @@ Porfolio
 #portfolio img {
 	width: 33.33333333%;
 }
-
 /**************************Galeria do Portfolio****************************/
 /* criando as colunas iguais que flutua uma do lado da outra  */
 * {
@@ -518,13 +458,11 @@ Porfolio
     }
 }
 
-
-
-
 /*============================================
 Contato
 ============================================*/
 #contato {
+	background-color: #F0FFFF;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -532,34 +470,16 @@ Contato
 	margin: 0 auto;
 }
 
+
 #contato h2,
-#contato p {
-	width: 100%;
-}
-#contato img{
-	width: 50%
-}
-
-
+#contato p {width: 100%;}
+#contato img{width: 50%}
 
 /* Redes Sociais.....*/
-.facebook {
-    background-image: url('../img/facebook.jpg');
-}
- 
-.youtube {    
-	background-image: url('../img/youtube.jpg');
-}
- 
-.gmail {
-       background-image: url('../img/google.jpg');
-}
- 
-.instagram {
-      background-image: url('../img/instagram.jpg');
-}
-
-
+.facebook {background-image: url('../img/facebook.jpg');}
+.youtube {background-image: url('../img/youtube.jpg');}
+.gmail {background-image: url('../img/google.jpg');}
+.instagram {background-image: url('../img/instagram.jpg');}
 
 #bibiografia {
 	/*background-image: url('../img/fundo-sobre.jpg');
@@ -580,9 +500,7 @@ Contato
 	margin-bottom: 2.5em;
 	max-width: 1000px; /*define uma largura maxima .... muito legal*/
 
-
 }
-
 
 /*  Utilizamos o Google FOnts para carregar algumas fontes 
 direto para a Página .https://fonts.google.com/ 

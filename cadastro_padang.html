@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Padang Surf</title>
+	<meta charset="utf-8">
+	<!--<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Kavivanar|Pacifico" rel="stylesheet">-->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="shortcut icon" href="img/favicon.ico">
+</head>
+
+
+<body>
+	<nav>
+		<a href="index.html" class="nova-font"> Padang Surf </a>
+		<ul>
+			<li><a href="galeria.php"> PORTFOLIO</a></li>
+			<li><a href="#servicos"> SERVIÇOS</a></li>
+			<li><a href="#contato"> CONTATO </a></li>
+		</ul>	
+	</nav>
+		<div id="cadastro">
+			<form id="cadastroMeusDados" method="post"  action="enviar_cadastro_padang.php">
+				<h1>Meu Cadastro</h1>
+				<fieldset>
+					<legend>Meus Dados:</legend>
+					<h3>Para ser cliente, é necessário preencher corretamente o formulário abaixo com os respectivos dados cadastrais. Os campos que possuem o "<span>*</span>" são de preenchimento obrigatório. </h3>
+					<div id="cadastroMeusDadosNomes">
+						<p>:Login <span>*</span></p><input type="text" name="login" id="login"><br>
+						<p>:Nome Comleto <span>*</span></p><input type="text" name="nome" id="nome"><br>
+						<p>:CPF <span>*</span></p><input type="number" name="cpf" id="cpf"><br>
+						<p>:Data de Nascimento <span>*</span></p><input type="date" name="dataNascimento" id="dataNascimento"><br>
+						<p>:Sexo <span>*</span></p><input type="char" name="sexo" id="sexo"><br>
+						<p>:Telefone <span>*</span></p> <input type="number" name="telefone" id="telefone" ><br>
+						<p>:E-mail <span>*</span></p><input type "text" name="email" id ="email"><br>
+						<p>:Senha <span>*</span></p><input type="password" name="senha" id="senha"><br>
+						<p>:Confirmação de Senha<span>*</span></p><input type="password" name="senha2" id="senha2">
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Meu Endereço: </legend>
+					<h3>Os campos que possuem <span>*</span> são de preenchimento obrigatório, pois são impressos na Nota Fiscal do pedido.</h3>
+					<div id="cadastroMeuEndereco">
+						<p>:CEP<span>*</span></p><input type="number" name ="cep">
+							<p>:Identificação <span>*</span></p><input type="text" name="identificacao"><br>
+						<p>:Endereço<span>*</span></p><input type="text" name ="endereco">
+						<p>:Número<span>*</span></p><input type="number" name="numero">
+						<p>:Bairro<span>*</span></p><input type="text" name="bairro">
+						<p>:Cidade<span>*</span></p><input type="text" name="cidade">
+						<p>:Estado<span>*</span></p><input type="text" name="estado">
+						<p>:Complemento</p><input type="text" name="complemento">
+					</div>
+				</fieldset>
+				<div id="botoes">
+					<input name="enviar" id="enviar"type="submit" value="Enviar">
+					<input name="limpar" id="cancelar"type="reset" value="Limpar">
+				</div>
+			</form>
+		</div>
+	</body>
+<nav>
+    <ul class="icones-sociais">
+       
+       <li>
+       		Redes Sociais
+       </li> 
+       <li>
+            <a href="https://www.facebook.com/Padang.inc" class="facebook">
+            <img src="img/facebook.png" alt="facebook">
+
+            </a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/user/rafaelpadang/" class="youtube">
+            <img src="img/youtube.png" alt="youtube">
+            </a>
+        </li>
+        <li>
+            <a href="https://gmail.com/" class="gmail">
+                <img src="img/google.png" alt="gmail">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/padangmovie/" class="instagram">
+                <img src="img/instagram.png" alt="instagram">
+            </a>
+        </li>
+    </ul>
+</nav>
+
+
+
+<footer>
+	<p>FPIN - PADANG</p>
+</footer>
+
+</body>
+</html>

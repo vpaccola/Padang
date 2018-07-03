@@ -3,7 +3,7 @@
 <head>
 	<title>Padang Surf</title>
 	<meta charset="utf-8">
-	<!--<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Kavivanar|Pacifico" rel="stylesheet">-->
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Kavivanar|Pacifico" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
@@ -14,16 +14,16 @@
 
 <body>
 	<nav>
-		<a href="index.html" class="nova-font"> Padang Surf </a>
+		<a href="index.php" class="nova-font"> Padang Surf </a>
 		<ul>
-			<li><a href="index.html#portfolio"> PORTFOLIO</a></li>
+			<li><a href="galeria.php"> PORTFOLIO</a></li>
 			<li><a href="index.html#servicos"> SERVIÇOS</a></li>
 			<li><a href="index.html#contato"> CONTATO </a></li>
 		</ul>	
 	</nav>
 	
 		<header>
-			<h1 class="nova-font">Galeria</h1>
+			<h1 class="nova-font">PORTFOLIO</h1>
 		</header>
 
 
@@ -31,7 +31,15 @@
 <?php
 echo "Teste de texto"
 ?>
-</selection>
+</selection>	
+
+
+
+
+
+
+
+
 <footer>
 	<p>FPIN - PADANG</p>
 </footer>

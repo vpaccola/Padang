@@ -1,9 +1,10 @@
 <?php
+
     $host = "localhost";
-    $usuario = "root";
-    $senha = "";
-    $bd = "padang";
-    $conexao = @mysql_connect($host,$usuario,$senha);
+    $dbname = "padang";
+    $user = "root";
+    $password = "secret";
+    $conexao = @mysql_connect($host,$user,$password);
     if(!$conexao){
         die('Nao foi possivel conectar ao Banco!'. mysql_error());    
     }
@@ -12,4 +13,5 @@
     if(!$bancodedados){
     die('Nao foi possivel Estabelecer Conexao com o banco de dados'. mysql_error());
     }
-?>
+?> 
+

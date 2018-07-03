@@ -14,11 +14,12 @@
 
 <body>
 	<nav>
-		<a href="index.html" class="nova-font"> Padang Surf </a>
+		<a href="index.php" class="nova-font"> Padang Surf </a>
 		<ul>
-			<li><a href="galeria.php"> PORTFOLIO</a></li>
+			<li><a href="#portfolio"> PORTFOLIO</a></li>
 			<li><a href="#servicos"> SERVIÇOS</a></li>
 			<li><a href="#contato"> CONTATO </a></li>
+			<li><a href="login.html"> Login/Cadastro </a></li>
 		</ul>	
 	</nav>
 
@@ -43,21 +44,22 @@
 	
 		<div>
 			<img src="img/vestuario.png"  alt="vestuario">
-			<h3>Vestuario</h3>
-			<p> A marca Padang vem inovando com seu vestuário de surf wear ....</p>
+			<h3> Vestuario</h3>
+			<p> A marca Padang vem inovando com seu vestuário de surf wear</p>
 		</div>
 
 		<div>
 			<img src="img/fotografia.png" alt="fotografia" >
 			<h3 > Cobertura Fotográfica </h3>
-			<p> Agendamento de cobertura fotografica em eventos, bla bla bla ......</p>
+			<p> Agendamento de cobertura fotografica em eventos</p>
 		</div>
-
+<!--
 		<div>
 			<img src="img/films.png" alt="films"  >
-			<h3>E dições de VideoClipes</h3>
+			<h3>Edições de VideoClipes</h3>
 			<p> Edicoes de video de esportes radicais e tal tal tal tal </p>
 		</div>
+-->
 </selection>
 
 <!-- Retirada das divs , para utilizar o css.... Portfolio será as imagens para mostrar no site, futuramente a ser atualizado... -->
@@ -65,9 +67,9 @@
 <!-- Portfolio Gallery Grid -->
 
 
-<!-- PORTFOLIO SENDO RETIRADO DA PAGINA INICIAL PARA UM LINK ESPECIFICO
+
 <section id="portfolio">
-		<h2 class="nova-font">PORTFÓLIO</h2>
+		<h2 class="nova-font"> <a href="galeria.php"> PORTFÓLIO </a></h2>
 <div class="row">
   <div class="column">
     <div class="content">
@@ -98,7 +100,6 @@
   </div>
    <!Colocar mais imagens , com as resoluções iguais .......!>
   </section>
--->
 
 
 <section id="contato">

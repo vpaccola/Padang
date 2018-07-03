@@ -15,7 +15,7 @@
 body {
 	/*font-family: "Inconsolata",  monospace;*/
 	font-family: "Josefin Sans", sans-serif;
-	color: #4d4d4d;*/
+	color: #4d4d4d;
 	color: black;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
@@ -42,7 +42,7 @@ h2 {
 	text-decoration: none;
 	padding: 10px 30px;
 	background-color: #1abc9c;
-	font-size: .em;
+	font-size: em;
 	border-radius: 3px;
 }
 
@@ -176,7 +176,7 @@ header p {
 /*como os Serviços estao separados por div....*/
 
 #servicos div {
- 	display: flex;
+	display: flex;
  	flex-direction: column;
  	align-items: center;
  	text-align: center;
@@ -192,6 +192,9 @@ header p {
 }
 #servicos img{
 	width: 20%
+}
+#servicos p{
+	text-align: center;
 }
 
 
@@ -237,7 +240,7 @@ form h2 {
     border-color: transparent !important;
 }
 .btn-primary:hover {
-    color: # fff;
+    color: #fff;
     background-color: #00a2e8;
     border-color: #29a192;
 }

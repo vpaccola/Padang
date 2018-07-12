@@ -3,9 +3,9 @@
 $nome = $_POST["nome"];
 $email=$_POST["email"];
 $senha=$_POST["senha"];
-include "/database/conexao.php";
-
- $sql = mysql_query("INSERT INTO 'usuarios'(nome,email,senha)VALUES('$nome','$email','$senha')");
+include "database/conexao.php";
+//INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `admin`) VALUES (NULL, 'nome', 'email', 'senha', '0');
+ $sql = mysqli_query($conexao, "INSERT INTO `usuarios` (`nome`,`email`,`senha`) VALUES('$nome','$email','$senha')");
 ?>
 <html>
   <head>
@@ -23,9 +23,11 @@ include "/database/conexao.php";
                   <div id="confirmacao"> 
                                     
                        <?php
+							echo ($sql);
+							echo (mysqli_error($conexao));
                             if($sql){
                              echo "<span class='sucess'>Cadastro Realizado com sucesso</span>";
-                             echo "<meta http-equiv=refresh content='1;url=..\\index.php'>";
+                             echo "<meta http-equiv=refresh content='1;url=\\padang'>";
                              }else{
                                 echo "Falha ao realizar o cadastro";
                                 //echo "<meta http-equiv=refresh content='1;url=cadastro_padang.html'>";

@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +21,11 @@
 			<li><a href="#portfolio"> PORTFOLIO</a></li>
 			<li><a href="#servicos"> SERVIÇOS</a></li>
 			<li><a href="#contato"> CONTATO </a></li>
+			<?php if (isset($_SESSION['email'])): ?>
+			<li><a href="logout_padang.php"><?=$_SESSION['nome']?>/Logout</a></li>		
+			<?php else: ?>
 			<li><a href="login.html"> Login/Cadastro </a></li>
+			<?php endif ?>
 		</ul>	
 	</nav>
 
@@ -43,15 +49,18 @@
 		<h2 class="nova-font">Serviços</h2>
 	
 		<div>
-			<img src="img/vestuario.png"  alt="vestuario">
-			<h3> Vestuario</h3>
-			<p> A marca Padang vem inovando com seu vestuário de surf wear</p>
+			<img src="img/fotografia.png"  alt="fotografia">
+			<h3> Sessões fotográficas </h3>
+			<p> Agendamento de sessões particular </p>
 		</div>
 
 		<div>
-			<img src="img/fotografia.png" alt="fotografia" >
-			<h3 > Cobertura Fotográfica </h3>
+			<a href="agendamento_evento.php">
+			<img src="img/fotografia.png" alt="fotografia">
+			<h3 > Cobertura em Evento </h3>
 			<p> Agendamento de cobertura fotografica em eventos</p>
+			</a>
+
 		</div>
 <!--
 		<div>
@@ -102,49 +111,6 @@
   </section>
 
 
-<section id="contato">
-	<form class="form-horizontal">
-		<h2 class="nova-font">CONTATO</h2>
-
-		<!-- NOME -->
-		<div class="form-grupo">
-			<label class="col-md-4 control-label" for="textinput_nome">Nome</label>
-			<div class="col-md-4">
-				<input id="textinput_nome" name="textinput_nome" placeholder="digitar nome completo" class="form-control input-md" required="" type="text">
-				<span class="help-block">entre com seu nome</span>
-			</div>
-		</div>
-
-		<!-- EMAIL -->
-		<div class="form-grupo">
-			<label class="col-md-4 control-label" for="textinput_email">Email</label>
-			<div class="col-md-4">
-				<input id="textinput_email" name="textinput_email" placeholder="digite um email válido" class="form-control input-md" required="" type="text">
-				<span class="help-block">entre com seu email</span>
-			</div>
-		</div>
-
-		<!-- MENSAGEM -->
-		<div class="form-grupo">
-			<label class="col-md-4 control-label" for="textarea_mensagem">Mensagem</label>
-			<div class="col-md-4">
-				<textarea class="form-control" id="textarea_mensagem" name="textarea_mensagem" placeholder="digite aqui sua mensagem"></textarea>
-			</div>
-		</div>
-
-		<!-- BOTÃO -->
-		<div class="form-grupo">
-		 <label class="col-md-4 control-label" for="singlebutton_enviar"></label>
-		 <div class="col-md-4">
-		 	<button id="singlebutton_enviar" name="singlebutton_enviar" class="botao"> enviar </button>
-		 </div>
-		</div>
-	</form>
-</div>
-</div>
-</section>
-
-
 
 <!--Menu inferior contendo as Redes Sociais da Padang-->
 <nav>
@@ -186,17 +152,3 @@
 </body>
 </html>
 
-
-<!--<section id="contato">
-	<h2>CONTATO</h2>
-	<p>Entre em contato conosco.</p>
-	<div>
-		<img src="img/fone.png" alt"fone">
-		<p><a href="tel:xx55555555"> (xx) 0000-0000</a></p>
-	</div>
-
-	<div>
-		<img src="img/contato.png" alt="email">
-		<p> <a href="mailto:email@contato"> email@contato.com</a></p> 
-	</div>
-</section>-->

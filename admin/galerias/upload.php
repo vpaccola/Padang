@@ -9,7 +9,7 @@
 
         $arquivo_tmp = $_FILES['imagem']['tmp_name'];
         
-        cadastraImagemNoBanco($pdo, $_POST['id'], $destino, $arquivo_tmp);
+        cadastraImagemNoBanco($conexao, $_POST['id'], $destino, $arquivo_tmp);
 
         move_uploaded_file( $arquivo_tmp, $destino  );
 
@@ -23,7 +23,7 @@
 
         $arquivo_tmp = $_FILES['imagem']['tmp_name'];
         
-        cadastraImagemNoBanco($pdo, $_POST['id'], $destino, $arquivo_tmp);
+        cadastraImagemNoBanco($$conexao, $_POST['id'], $destino, $arquivo_tmp);
 
         move_uploaded_file( $arquivo_tmp, $destino  );
         
@@ -33,12 +33,7 @@
 
     function cadastraImagemNoBanco($conexao, $galeria_id, $destino, $nome)
     {
-        $sql = 'insert into fotos(galeria_id,path,thumb)values(:galeria_id,:path,:thumb)';
-        $stmt = $conexao->prepare($sql);
-        $stmt->bindParam(':galeria_id', $galeria_id);
-        $stmt->bindParam(':path', $destino);
-        $stmt->bindParam(':thumb', $nome);
-        $stmt->execute();
+        $sql = mysqli_query($conexao, "INSERT INTO `fotos`(`galeria_id`,`path`,`thumb`) VALUES('$galeria_id','$destino','$nome')");
     }
 
 ?>

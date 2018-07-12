@@ -25,14 +25,10 @@
 	</nav>
 
 <?php if (isset($_SESSION['email'])): ?>
-	<h2 class="nova-font">Cobertura em eventos</h2>
+	<h2 class="nova-font">Agendamento de Sessão</h2>
 	<section id="contato">
-	<form class="form-horizontal" action="confirmar_evento.php" method="post">
-		<p class="nova-font">Preencha os campo abaixo e selecione a(s) data(s) do evento para concluir o agendamento.</p>
-		<p>Nome do Evento: </p>
-		<input type="text" name="nome" placeholder="nome">
-		<p>Endereço: </p>
-		<input type="text" name="endereco" placeholder="endereco">
+	<form class="form-horizontal" action="confirmar_sessao.php" method="post">
+		<p class="nova-font">Preencha os campo abaixo e selecione a data da sessão para concluir o agendamento.</p>
 		<p>Data </p>
 		<input type="date" name="data" placeholder="data">
 		<p>hora </p>

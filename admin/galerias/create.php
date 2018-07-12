@@ -6,7 +6,7 @@
 
     if( $_SERVER['REQUEST_METHOD'] == 'POST')
     {
-        $mensagem = cadastraGaleria($pdo);
+        $mensagem = cadastraGaleria($conexao);
     }
     
 ?>

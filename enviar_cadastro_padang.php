@@ -6,6 +6,7 @@ $senha=$_POST["senha"];
 include "database/conexao.php";
 //INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `admin`) VALUES (NULL, 'nome', 'email', 'senha', '0');
  $sql = mysqli_query($conexao, "INSERT INTO `usuarios` (`nome`,`email`,`senha`) VALUES('$nome','$email','$senha')");
+  
 ?>
 <html>
   <head>

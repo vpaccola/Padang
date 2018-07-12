@@ -191,12 +191,15 @@ header p {
 	width: 100%;
 }
 #servicos img{
-	width: 20%
+	width: 80px
 }
 #servicos p{
 	text-align: center;
 }
 
+#servicos a {
+	text-decoration: none;
+}
 
 /*=====Portfolio=====*/
 
@@ -220,7 +223,7 @@ form {
     padding: 5em;
     text-align: center;
     line-height: 26px;
-    font-weight: 400;
+    font-weight: 400;Servicos
     box-sizing: border-box;    
 
 }
@@ -505,6 +508,8 @@ Contato
 
 }
 
+
+
 /*  Utilizamos o Google FOnts para carregar algumas fontes 
 direto para a Página .https://fonts.google.com/ 
 Atraves do GOOGLE FONTS colocamos o link la no Index e utilizaremos essas Familias
@@ -512,3 +517,45 @@ font-family: 'Pacifico', cursive;  ( Pro titulo )
 font-family: 'Kavivanar', cursive;  (  paragrafos ...)
 font-family: 'Fjalla One', sans-serif; ( Subtitulos)
  */
+
+
+ /*============================================
+evt-agendados
+========== ==================================*/
+#evt-agendados {
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+#evt-agendados h2 {
+	width: 100%;
+	text-align: center;
+}
+
+#sessoes-agendados {
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+#sessoes-agendados h2 {
+	width: 100%;
+	text-align: center;
+}
+
+
+#evt-agendados img {
+	width: 33.33333333%;
+}
+
+table {
+	height: 200px;
+	width: 800px;
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	text-align: center; 	
+}
+
+th{
+	border-bottom: 1px solid black;
+}
+
+

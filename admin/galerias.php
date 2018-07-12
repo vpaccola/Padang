@@ -3,7 +3,9 @@
     require_once "../database/conexao.php";
 
     verificaSessaoAdmin();
-    $galerias = consultaGalerias($pdo);
+    $galerias = consultaGalerias($conexao);
+
+    // print_r($galerias);
     
 ?>
 <!DOCTYPE html>
@@ -50,13 +52,13 @@
         foreach($galerias as $galeria)
         {
         ?>
-        <a class="panel-thumb" href="galerias/show.php?id=<?php echo $galeria->id;?>">
+        <a class="panel-thumb" href="galerias/show.php?id=<?php echo $galeria[0];?>">
         <div class="panel-thumb">
             <?php
-                $galeriaImagem = thumbGaleria($pdo, $galeria->id);
+                $galeriaImagem = thumbGaleria($conexao, $galeria[0]);
             ?>
             <div class="thumb">
-                <?php if(isset($galeriaImagem[0]->path))
+                <?php if(!empty($galeriaImagem))
                 {
                 ?>
                     <img class="thumb-image" src="../storage/<?php echo $galeria->id?>/<?php echo $galeriaImagem[0]->path ?>" >
@@ -64,8 +66,10 @@
                 }
                 ?>
                 
+
+
             </div>
-            <p>Nome: <?php echo $galeria->nome ?> </p>
+            <p>Nome: <?php echo $galeria[1] ?> </p>
         </div>
         </a>
         <?php

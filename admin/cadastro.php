@@ -5,7 +5,7 @@
 
     if( $_SERVER['REQUEST_METHOD'] == 'POST')
     {
-        $mensagem = verificaLoginCadastro($pdo);
+        $mensagem = verificaLoginCadastro($conexao);
     }
 ?>
 

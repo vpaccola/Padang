@@ -30,17 +30,15 @@
     function cadastrarAdministrador($nome, $email, $senha, $conexao)
     {
         $senhaHash = md5($senha);
-        $sql = "insert into usuarios(nome,email,senha)values(:nome,:email,:senha)";
-        $stmt = $conexao->prepare($sql);
-        $stmt->bindParam(':nome', $nome);
-        $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':senha', $senhaHash);
+        $sql = mysqli_query($conexao, "INSERT INTO `usuarios` (`nome`,`email`,`senha`) VALUES('$nome','$email','$senhaHash')");
     
-        if( $stmt->execute() )
+        if($sql)
         {
             $mensagem[] = "Usuario Criado com Sucesso!";
             return $mensagem;
-        } else {
+        }
+        else 
+        {
             print_r($stmt->errorInfo());
             $mensagem[] = "Falha Ao Criar o Usuario";
             return $mensagem;
@@ -68,7 +66,7 @@
         } 
         else 
         {
-           $mensagem = verificaLoginAdmin($email, $senha, $conexao);
+            $mensagem = verificaLoginAdmin($email, $senha, $conexao);
            return $mensagem;
         }
     }
@@ -76,29 +74,23 @@
 
     function verificaLoginAdmin($email, $senha, $conexao)
     {
-        $sql = "select * from usuarios where email = :email";
-        $stmt = $conexao->prepare($sql);
-        $stmt->bindParam(':email', $email);
-        $stmt->execute();
-
-        $rows = $stmt->fetchAll( \PDO::FETCH_OBJ );
+        $result = mysqli_query($conexao, "SELECT * FROM `usuarios` WHERE `email` = '$email'");
+		$rows = mysqli_fetch_assoc($result);
         
-        if( count( $rows ) <= 0 )
+        if( empty($rows) )
         {
             $errors[] = 'Email Invalido';
             return $errors;
         } 
         else 
         {
-           $usuario = $rows[0];
-           
-           if(md5($senha) != $usuario->senha)
+           if(md5($senha) != $rows['senha'])
            {   
                $errors[] = 'Senha Incorreta';
                return $errors;
            }
-           else {
-               criaSessaoAdmin($usuario);
+           else {       
+               criaSessaoAdmin($rows);
                header('location:home.php');
            }
         }
@@ -107,8 +99,8 @@
     function criaSessaoAdmin($usuario)
     {
         session_start();
-        $_SESSION['usuario'] = $usuario->nome;
-        $_SESSION['id'] = $usuario->id;
+        $_SESSION['usuario'] = $usuario['nome'];
+        $_SESSION['id'] = $usuario['id'];
     }
 
     function destroySessaoAdmin()
@@ -119,7 +111,7 @@
     function verificaSessaoAdmin()
     {
         session_start();
-        if(!isset($_SESSION['usuario']) && !isset($_SESSION['id']))
+        if(!isset($_SESSION['usuario']) && !isset($_SESSION['id']) || empty($_SESSION['usuario']))
         {
             header('location:login.php');
         }
@@ -148,10 +140,10 @@
         if (count($errors) > 0) {
             return $errors; 
         } else {
-            $sql = "insert into galerias(nome)values(:nome)";
-            $stmt = $conexao->prepare($sql);
-            $stmt->bindParam(':nome', $nome);
-            if( $stmt->execute() )
+            
+            $sql = mysqli_query($conexao, "INSERT INTO `galerias` (`nome`) VALUES('$nome')");
+            
+            if( $sql )
             {
                 $mensagem[] = "Galeria Criada com Sucesso!";
                 return $mensagem;
@@ -164,37 +156,28 @@
 
     function consultaGalerias($conexao)
     {
-        $sql = "select * from galerias";
-        $stmt = $conexao->prepare($sql);
-        $stmt->execute();
-
-        $rows = $stmt->fetchAll( \PDO::FETCH_OBJ );
+        $result = mysqli_query($conexao, "SELECT * FROM `galerias`");
+		$rows = mysqli_fetch_all($result);
         
-        if( count( $rows ) <= 0 )
+        if( $rows )
         {
-            return null;
+            return $rows;
         } 
         else 
         {
-            return $rows;
+            return null;
         }
     }
 
     function findGaleriaById($conexao, $id)
     {
-        $sql = "select * from galerias where id = :id";
-        $stmt1 = $conexao->prepare($sql);
-        $stmt1->bindParam(':id', $id);
-        $stmt1->execute();
 
-        $galeria = $stmt1->fetchAll( \PDO::FETCH_OBJ );
+        $sql1 = mysqli_query($conexao, "SELECT * FROM `galerias` WHERE `id` = '$id'");
+        $galeria = mysqli_fetch_all($sql1); 
+        
+        $sql2 = mysqli_query($conexao, "SELECT * FROM `fotos` WHERE `galeria_id` = '$id'");
+        $fotos = mysqli_fetch_all($sql2); 
 
-        $sqlFotos = "select * from fotos where galeria_id = :id";
-        $stmt2 = $conexao->prepare($sqlFotos);
-        $stmt2->bindParam(':id', $id);
-        $stmt2->execute();
-
-        $fotos = $stmt2->fetchAll( \PDO::FETCH_OBJ );
         $info = [];
         
         array_push($info, $galeria);
@@ -205,11 +188,9 @@
 
     function thumbGaleria($conexao, $id)
     {
-        $sql = 'select path from fotos where galeria_id = :id LIMIT 1';
-        $stmt = $conexao->prepare($sql);
-        $stmt->bindParam(':id', $id);
-        $stmt->execute();
-        $rows = $stmt->fetchAll( \PDO::FETCH_OBJ );
-       return $rows;
+        $sql = mysqli_query($conexao, "SELECT * FROM `fotos` WHERE `galeria_id` = '$id'");
+        $rows = mysqli_fetch_all($sql);   
+    
+        return $rows;
     }
 ?>

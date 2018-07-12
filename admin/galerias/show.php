@@ -5,7 +5,9 @@
     verificaSessaoAdmin();
 
     if(isset($_GET['id']) && !empty($_GET['id'])){
-        $info = findGaleriaById($pdo, $_GET['id']);
+        $info = findGaleriaById($conexao, $_GET['id']);
+
+        print_r($info);
     } else {
         header('location:../galerias.php');
     }
@@ -51,21 +53,20 @@
        
     <div class="panel-body">
     <?php 
-        foreach($info[0] as $inf){
+        foreach($info as $inf){
             ?>
-        <h3>Nome: <?php echo $inf->nome;?></h3> 
+        <h3>Nome: <?php echo $inf[0][1];?></h3> 
     <?php
         }
     ?>
     <?php 
-        foreach($info[1] as $inf){
+        foreach($info as $inf){
             ?>
-
             <div class="panel-thumb">
             <div class="thumb">
                 <img class="thumb-image" src="../../storage/<?php echo $_GET['id']?>/<?php echo $inf->path?>" >
             </div>
-            <h3>foto: <?php echo $inf->thumb;?></h3> 
+            <h3>foto: <?php echo $inf[1];?></h3> 
         </div>
         
     <?php

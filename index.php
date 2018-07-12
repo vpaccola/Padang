@@ -1,4 +1,16 @@
-<?php session_start(); ?>
+<?php session_start(); 
+	require_once 'database/conexao.php';
+	
+	if(isset($_SESSION['id']))
+	{
+		$result = mysqli_query($conexao, "SELECT * FROM `eventos` WHERE usuario_id = " . $_SESSION['id']); 
+		$eventos = mysqli_fetch_all($result);
+		
+		$result2 = mysqli_query($conexao, "SELECT * FROM `sessoes` WHERE usuario_id = " . $_SESSION['id']);
+		$sessoes = mysqli_fetch_all($result2);
+	}
+	
+	?>
 
 <!DOCTYPE html>
 <html>
@@ -20,7 +32,6 @@
 		<ul>
 			<li><a href="#portfolio"> PORTFOLIO</a></li>
 			<li><a href="#servicos"> SERVIÇOS</a></li>
-			<li><a href="#contato"> CONTATO </a></li>
 			<?php if (isset($_SESSION['email'])): ?>
 			<li><a href="logout_padang.php"><?=$_SESSION['nome']?>/Logout</a></li>		
 			<?php else: ?>
@@ -48,20 +59,24 @@
 <!-- Essa Div \/ está assim por que iremos utilizar imagens para demostrar os Serviços-->
 		<h2 class="nova-font">Serviços</h2>
 	
-		<div>
+		<div>	
+			<a href="agendamento_sessao.php" class="teste">
 			<img src="img/fotografia.png"  alt="fotografia">
 			<h3> Sessões fotográficas </h3>
 			<p> Agendamento de sessões particular </p>
+			</a>
 		</div>
 
 		<div>
-			<a href="agendamento_evento.php">
+			<a href="agendamento_evento.php" class="teste">
 			<img src="img/fotografia.png" alt="fotografia">
 			<h3 > Cobertura em Evento </h3>
 			<p> Agendamento de cobertura fotografica em eventos</p>
 			</a>
-
 		</div>
+
+
+
 <!--
 		<div>
 			<img src="img/films.png" alt="films"  >
@@ -70,7 +85,59 @@
 		</div>
 -->
 </selection>
+<?php if(isset($eventos) && !empty($eventos)): ?>
+<selection id="evt-agendados">
+<h2 class="nova-font">Eventos Agendados</h2>
+	<div>	
+	<table >
+		<tr>
+			<th>Nome
+			</th>
+			<th>Endereco
+			</th>
+			<th>Data
+			</th>
+			<th>Hora
+			</th>
+		</tr>
+		<?php foreach($eventos as $evento): ?>
+		<tr>
+		<td><?php echo $evento[1]?></td>
+		<td><?php echo $evento[4]?></td>
+		<td><?php echo  $data = implode("/",array_reverse(explode("-",$evento[2])));?></td>
+		<td><?php echo $evento[3]?></td>
+		</tr>
+		<?php endforeach; ?>
+		</table>
+	</div>
+	
+</selection>
+<?php endif?>
 
+
+<?php if(isset($sessoes) && !empty($sessoes)): ?>
+<selection id="sessoes-agendadas">
+<h2 class="nova-font">Sessoes Agendadas</h2>
+	<div>	
+	<table >
+		<tr>
+			<th>Data
+			</th>
+			<th>Hora
+			</th>
+		</tr>
+		<?php foreach($sessoes as $sessao): ?>
+		<tr>
+		<td><?php echo  $data = implode("/",array_reverse(explode("-",$sessao[1])));?></td>
+		<td><?php echo $sessao[2]?></td>
+		
+		</tr>
+		<?php endforeach; ?>
+		</table>
+	</div>
+	
+</selection>
+<?php endif?>
 <!-- Retirada das divs , para utilizar o css.... Portfolio será as imagens para mostrar no site, futuramente a ser atualizado... -->
 <!-- Portfolio Gallery Grid -->
 <!-- Portfolio Gallery Grid -->
@@ -107,7 +174,7 @@
    
     </div>
   </div>
-   <!Colocar mais imagens , com as resoluções iguais .......!>
+</div>
   </section>
 
 
